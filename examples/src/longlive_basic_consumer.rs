@@ -39,7 +39,7 @@ async fn main() {
         .await
         .unwrap();
 
-    // declare a queue
+    // declare a server-named transient queue
     let (queue_name, _, _) = channel
         .queue_declare(QueueDeclareArguments::default())
         .await
@@ -61,7 +61,7 @@ async fn main() {
     //////////////////////////////////////////////////////////////////////////////
     // start consumer, auto ack
     let args = BasicConsumeArguments::new(&queue_name, "basic_consumer")
-        .no_ack(true)
+        .manual_ack(false)
         .finish();
 
     channel
