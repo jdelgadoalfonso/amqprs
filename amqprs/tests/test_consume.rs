@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 use amqp_serde::types::FieldTable;
 use amqprs::{
     callbacks::{DefaultChannelCallback, DefaultConnectionCallback},
@@ -11,7 +9,11 @@ use amqprs::{
     consumer::{DefaultBlockingConsumer, DefaultConsumer},
     BasicProperties, DELIVERY_MODE_TRANSIENT,
 };
+
+use std::collections::HashMap;
+
 use tokio::time;
+
 mod common;
 
 #[tokio::test(flavor = "multi_thread", worker_threads = 5)]
