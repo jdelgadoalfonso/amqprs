@@ -36,7 +36,7 @@ tokio = { version = "1", features = [
     "time",
     "macros",
 ] }
-bytes = { version = "1.2" }
+bytes = { version = "1.4" }
 serde = { version = "1.0", features = ["derive"] }
 amqp_serde = { path = "../amqp_serde", version = "0.3" }
 async-trait = "0.1"
@@ -44,9 +44,9 @@ tracing = { version = "0.1", optional = true }
 uriparse = { version = "0.6", optional = true }
 
 # SSL/TLS dependencies
-tokio-rustls = { version = "0.23", optional = true }
+tokio-rustls = { version = "0.24", optional = true }
 rustls-pemfile = { version = "1", optional = true }
-webpki-roots = { version = "0.22", optional = true }
+webpki-roots = { version = "0.23", optional = true }
 
 [dev-dependencies]
 tracing = { version = "0.1" }
