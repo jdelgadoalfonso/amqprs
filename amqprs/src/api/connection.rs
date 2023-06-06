@@ -44,7 +44,7 @@ use std::{
 };
 
 use amqp_serde::types::{
-    AmqpChannelId, AmqpPeerProperties, FieldName, FieldTable, FieldValue, LongStr, LongUint,
+    AmqpChannelId, AmqpPeerProperties, FieldTable, FieldValue, LongStr, LongUint,
     ShortUint,
 };
 use tokio::sync::{broadcast, mpsc, oneshot};

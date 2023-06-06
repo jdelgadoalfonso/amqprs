@@ -282,8 +282,12 @@ impl BasicProperties {
         self
     }
 
-    pub fn headers(&self) -> Option<&FieldTable> {
+    pub fn headers_as_ref(&self) -> Option<&FieldTable> {
         self.headers.as_ref()
+    }
+    
+    pub fn headers(self) -> Option<FieldTable> {
+        self.headers
     }
 
     /// Chainable setter of headers.
